@@ -1,0 +1,19 @@
+<div class="row">
+<div class="col-md-12">
+<h1>Index</h1>
+
+  <% @todo.each do |f| %>
+  <div class="card">
+  <h4><%= link_to f.description, f %></h4>
+  <%= link_to "Check", completado_path(f.id)%>
+  <%= link_to "Editar", editar_path(f.id) %>
+  <%=link_to "Borrar", f, method: :delete%>
+
+</div>
+   <br>
+  <% end %>
+
+
+<%= link_to "Crear",todos_new_path %>
+</div>
+</div>
